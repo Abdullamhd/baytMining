@@ -5,10 +5,11 @@ import solr
 import  pandas as pd
 
 total_docs = list()
-for numbers in range(4):
+for numbers in range(200):
     documents = extractor.extract(numbers)
     total_docs.append(documents)
     print(documents)
+    sleep(randint(3, 8))
 
 
     # if solr.index_document(documents):
